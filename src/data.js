@@ -1,4 +1,4 @@
-import gamepad from "@/assets/images/products/gamepad.png";
+import gamepad from "@/assets/images/products/Gamepad.png";
 import keyboard from "@/assets/images/products/Keyboard.png";
 import gamingMonitor from "@/assets/images/products/Gaming-Monitor.png";
 import chair from "@/assets/images/products/Chair.png";
