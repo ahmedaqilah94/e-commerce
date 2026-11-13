@@ -79,6 +79,7 @@ function StarRating({ product, setProducts, loggedUser }) {
         })}
       </div>
       <ModalMessage
+        starRating
         isOpen={modalData.isOpen}
         message={modalData.message}
         onClose={() => setModalData({ ...modalData, isOpen: false })}

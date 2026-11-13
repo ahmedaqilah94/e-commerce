@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-function ModalMessage({ isOpen, onClose, message }) {
+function ModalMessage({ isOpen, onClose, message, starRating }) {
   const { t } = useTranslation();
   if (!isOpen) return null;
 
@@ -22,6 +22,15 @@ function ModalMessage({ isOpen, onClose, message }) {
         </button>
 
         <p className="text-gray-600 text-sm mb-5">{message}</p>
+        {starRating ? (
+          <div>
+            <label htmlFor="comment">{t("We hope to see your comment")}</label>{" "}
+            <input
+              className="border my-[15px] h-[50px] w-full rounded-[4px] px-[10px]"
+              id="comment"
+            />
+          </div>
+        ) : null}
 
         <button
           type="button"
