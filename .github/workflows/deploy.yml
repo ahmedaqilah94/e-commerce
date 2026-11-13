@@ -22,6 +22,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Debug image files
+        run: |
+          echo "Current commit:"
+          git rev-parse HEAD
+
+          echo "Image file:"
+          ls -la src/assets/images/products/ | grep -i gamepad
+
+          echo "Import:"
+          grep -n -i gamepad src/data.js
+
+          echo "Tracked files:"
+          git ls-files | grep -i gamepad
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -38,7 +52,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
-
   deploy:
     environment:
       name: github-pages
