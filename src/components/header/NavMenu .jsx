@@ -9,7 +9,7 @@ import {
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
 
-function NaveMenu() {
+function NaveMenu({ loggedUser }) {
   const { t } = useTranslation();
   return (
     <div className="flex items-start lg:hidden">
@@ -41,8 +41,11 @@ function NaveMenu() {
           </DropdownMenuItem>
 
           <DropdownMenuItem>
-            <Link to="/signup" className="block w-full">
-              {t("Sign Up")}
+            <Link
+              to={!loggedUser ? "/signup" : "/account"}
+              className="block w-full"
+            >
+              {!loggedUser ? t("Sign Up") : t("Account")}
             </Link>
           </DropdownMenuItem>
         </DropdownMenu>

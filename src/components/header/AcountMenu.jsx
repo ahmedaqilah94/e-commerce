@@ -38,7 +38,7 @@ function AcountMenu({ setLoggedUser }) {
       >
         <DropdownMenuItem>
           <Link
-            to="/acount"
+            to="/account"
             className=" w-full flex items-center text-[14px] text-[#FAFAFA]  gap-4 py-0.5"
           >
             <User className="size-6 stroke-[1.5px]" />

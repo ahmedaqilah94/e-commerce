@@ -1,11 +1,17 @@
+import { useOutletContext } from "react-router-dom";
 import StarRating from "../card/StarRating";
 
 function ProductDetails({ product, setProducts }) {
+  const { loggedUser } = useOutletContext();
   return (
     <section className="border-b">
       <h1>{product.name}</h1>
       <div className="flex gap-[16px] my-[16px]">
-        <StarRating product={product} setProducts={setProducts} />
+        <StarRating
+          product={product}
+          setProducts={setProducts}
+          loggedUser={loggedUser}
+        />
         <h5 className="text-muted-foreground">
           ({product.reviewsCount} Reviews)
         </h5>

@@ -34,7 +34,7 @@ function PaymentSection({ totalCartPrice }) {
           </div>
         </div>
         <Button className="self-center p-0 w-[100%] sm:w-min">
-          <Link to="/cart/checkOut" className="py-[15px] px-[48px]">
+          <Link to="/checkout" className="py-[15px] px-[48px]">
             {t("Procees to checkout")}
           </Link>
         </Button>

@@ -2,6 +2,7 @@ import { Heart } from "lucide-react";
 import { Button } from "../ui/button";
 import { updateProduct } from "@/data";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 function BuyDetails({ product, setProducts }) {
   const { t } = useTranslation();
@@ -81,7 +82,11 @@ function BuyDetails({ product, setProducts }) {
               +
             </Button>
           </div>
-          <Button className="h-[44px]">Buy Now</Button>
+          <Button className="h-[44px]">
+            <Link className="h-[100%] flex items-center" to="/checkout">
+              {t("Buy Now")}
+            </Link>
+          </Button>
           <Button
             className={`bg-background text-foreground border p-0 size-[40px] border-[#00000080]/50 ${product.isFavorite && "bg-primary text-primary-foreground"}`}
             onClick={toggleAddToFavorite}

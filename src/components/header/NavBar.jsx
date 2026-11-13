@@ -17,9 +17,9 @@ function NavBar({ loggedUser }) {
       </Link>
       <Link
         className="transition-colors hover:text-red-500"
-        to={!loggedUser ? "/signup" : "/acount"}
+        to={!loggedUser ? "/signup" : "/account"}
       >
-        {!loggedUser ? t("Sign Up") : t("Acount")}
+        {!loggedUser ? t("Sign Up") : t("Account")}
       </Link>
     </nav>
   );
